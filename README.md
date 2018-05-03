@@ -1,5 +1,5 @@
 # i3 rice
-be kind senpai also here's the [wallpaper](wallpaper.jpg)
+be kind senpai also here's the [wallpaper](Wallpaper.jpg)
 ![pic](desktop.png)
 
 ## List of what i use and various packages needed
