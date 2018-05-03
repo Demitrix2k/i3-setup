@@ -79,7 +79,7 @@ bindsym $Mod+u        resize shrink width 10 px or 10ppt
 
 floating_modifier $mod
 bindsym $Mod+F1 exec $term firefox 
-bindsym $Mod+F2 exec $term nautilus 
+bindsym $Mod+F2 exec $term thunar 
 
 #Useless on X230
 bindsym XF86TouchpadOn 		exec --no-startup-id exec synclient TouchpadOff=0
