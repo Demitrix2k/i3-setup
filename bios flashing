@@ -1,0 +1,21 @@
+1. Get the bios update iso (8duj10uc.iso here) from the lenovo support site.
+
+ 
+
+2. Get 'geteltorito' and extract the boot image from the iso (isobar.c probably works too)
+
+$ wget 'http://www.uni-koblenz.de/~krienke/ftp/noarch/geteltorito/geteltorito.pl'
+
+$ perl geteltorito.pl 8duj10uc.iso > biosupdate.img
+
+ 
+
+3. Copy the image to the usb thumdrive
+
+$ sudo dd if=biosupdate.img of=/dev/usbthumdrive bs=512K
+
+ 
+
+Reboot, Press F12 and boot from thumb drive.
+
+ 
