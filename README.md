@@ -15,6 +15,6 @@ be kind senpai
 + firefox
 + thunar
 + awesome font pack
-+
-+
-+
++ backlight
++ dunst
++ ++more il add later
