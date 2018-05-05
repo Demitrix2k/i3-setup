@@ -69,9 +69,9 @@ set_from_resource $color8 i3wm.color8 "#480524"
 client.focused          #f9b509   #555555   #555555  #555555  #555555
 client.focused_inactive $coloract #555555   #555555  #555555  #555555
 client.unfocused        $colorin  $colorin  $color15 #000000  #000000
-client.urgent           $coloru   $coloru   $color15 $coloru $coloru
-client.placeholder      $color0   $color8   $color15 $color0 $color8
-#client.background       $color0
+client.urgent           $coloru   $coloru   $color15 $coloru  $coloru
+client.placeholder      $color0   $color8   $color15 $color0  $color8
+#client.background      $color0
 
 ###### KEYBINDINGS #######
 
@@ -81,41 +81,43 @@ set $fbrowser thunar
 set $up l
 set $down k
 set $left j
-set $right semicolon
+set $right ø
 
 #Applications
-bindsym			 $Mod+F1 exec --no-startup-id $browser 
-bindsym			 $Mod+F2 exec --no-startup-id $fbrowser
-bindsym			 $Mod+F4 exec --no-startup-id spotify
+bindsym         $Mod+F1             exec --no-startup-id $browser 
+bindsym         $Mod+F2             exec --no-startup-id $fbrowser
+bindsym         $Mod+F4             exec --no-startup-id spotify
 
-bindsym 		 $Mod+r mode "resize"
-bindsym 		 $Mod+y      resize shrink height 10 px or 10 ppt
-bindsym			 $Mod+u        resize shrink width 10 px or 10ppt
-bindsym 		 $Mod+Return exec urxvt
-bindsym 		 $Mod+v split v
-bindsym 		 $Mod+f fullscreen toggle
-bindsym 		 $Mod+e layout toggle split
-bindsym 		 $Mod+Shift+space floating toggle
-bindsym 		 $Mod+space focus mode_toggle
-bindsym 		 $Mod+q kill
-bindsym			 $Mod+shift+q kill
-bindsym     		 $Mod+$left focus left
-bindsym     		 $Mod+$down focus down
-bindsym     		 $Mod+$up focus up
-bindsym     		 $Mod+$right focus right
-bindsym     		 $Mod+Left focus left
-bindsym     		 $Mod+Down focus down
-bindsym     		 $Mod+Up focus up
-bindsym     		 $Mod+Right focus right
-bindsym			 $Mod+Shift+$left move left
-bindsym			 $Mod+Shift+$down move down
-bindsym			 $Mod+Shift+$up move up
-bindsym			 $Mod+Shift+$right move right
-bindsym			 $Mod+Shift+Left move left
-bindsym			 $Mod+Shift+Down move down
-bindsym			 $Mod+Shift+Up move up
-bindsym			 $Mod+Shift+Right move right
-bindsym 	 $mod+Shift+Delete exec $truemute ; exec $truepause ; workspace 10 ; exec $term -e htop ; exec $term -e ranger
+bindsym         $Mod+r              mode "resize"
+bindsym         $Mod+y              resize shrink height 10 px or 10 ppt
+bindsym         $Mod+u              resize shrink width 10 px or 10ppt
+bindsym         $mod+Shift+t        gaps inner current set 7; gaps outer current set 15
+bindsym         $mod+t              gaps inner current set 0; gaps outer current set 0
+bindsym         $Mod+Return exec    $term
+bindsym         $Mod+v              split v
+bindsym         $Mod+f              fullscreen toggle
+bindsym         $Mod+e              layout toggle split
+bindsym         $Mod+Shift+space    floating toggle
+bindsym         $Mod+space          focus mode_toggle
+bindsym         $Mod+q              kill
+bindsym         $Mod+shift+q        kill
+bindsym         $Mod+$left          focus left
+bindsym         $Mod+$down          focus down
+bindsym         $Mod+$up            focus up
+bindsym         $Mod+$right         focus right
+bindsym         $Mod+Left           focus left
+bindsym         $Mod+Down           focus down
+bindsym         $Mod+Up             focus up
+bindsym         $Mod+Right          focus right
+bindsym         $Mod+Shift+$left    move left
+bindsym         $Mod+Shift+$down    move down
+bindsym         $Mod+Shift+$up      move up
+bindsym         $Mod+Shift+$right   move right
+bindsym         $Mod+Shift+Left     move left
+bindsym         $Mod+Shift+Down     move down
+bindsym         $Mod+Shift+Up       move up
+bindsym         $Mod+Shift+Right    <move right
+bindsym         $mod+Shift+Delete   exec $truemute ; exec $truepause ; workspace 10 ; exec $term -e htop ; exec $term -e ranger
 
 #Workspaces
 set $ws1 "1"
