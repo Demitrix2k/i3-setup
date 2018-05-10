@@ -16,5 +16,6 @@ be kind senpai also here's the [wallpaper](Wallpaper.jpg)
 + thunar
 + awesome font pack
 + backlight
-+ dunst
++ dunstotf-font-awesome-5-free
++
 + ++more il add later
