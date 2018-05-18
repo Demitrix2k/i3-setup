@@ -90,7 +90,8 @@ set $right L
 bindsym         $Mod+F1             exec --no-startup-id $browser 
 bindsym         $Mod+F2             exec --no-startup-id $fbrowser
 bindsym         $Mod+F4             exec --no-startup-id $music
-bindsym		$Mod+Print          exec scrot -e 'mv $f ~/Pictures/scrot'
+bindsym         $Mod+Print          exec scrot -e 'mv $f ~/Pictures/scrot'
+bindsym         $Mod+F5             exec --no-startup-id syncthing-gtk
 
 
 bindsym         $Mod+Return exec    $term
