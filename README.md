@@ -14,6 +14,7 @@ be kind senpai also here's the [wallpaper](Wallpaper.jpg)
 + nitrogen
 + firefox
 + thunar
++ syncthing-gtk
 + awesome font pack
 + backlight
 + dunstotf-font-awesome-5-free
