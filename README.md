@@ -13,7 +13,7 @@ be kind senpai also here's the [wallpaper](Wallpaper.jpg)
 + neofetch
 + nitrogen
 + firefox
-+ thunar
++ thunar + tumbler
 + syncthing-gtk
 + awesome font pack
 + backlight
