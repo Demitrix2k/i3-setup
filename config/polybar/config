@@ -1,4 +1,4 @@
-﻿; yahooo 
+; yahooo 
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -11,7 +11,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #000000
-background = #00000000
+background = #0000000
 ;background = #31343e
 ;background-alt = #444
 background-alt = #423a4a
@@ -68,7 +68,9 @@ modules-right = volume battery cpu temperature date
 tray-position = right
 tray-padding = 2
 tray-transparent = true
-tray-background = #0063ff
+tray-background = #0000000
+;tray-background = #0063ff
+
 
 ;wm-restack = bspwm
 ;wm-restack = i3
