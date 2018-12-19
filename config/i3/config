@@ -1,8 +1,9 @@
 #i3-gaps config
 
-for_window [class="^.*"] border pixel 3 
+for_window [class="^.*"] border pixel 0 
 gaps inner 7
 gaps outer 15
+#font monospace 9
 font pang#o:mono 9
 set $Mod Mod4
 
@@ -11,7 +12,7 @@ set $Mod Mod4
 #Compton
 exec --no-startup-id compton
 #wallpaper
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen--restore
 #polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 #Networkmanager
@@ -23,7 +24,9 @@ exec_always --no-startup-id ~/.config/i3/Touchpad.sh
 #Category menu
 bindsym $Mod+z exec --no-startup-id morc_menu 
 #Start program launcher
-bindsym $Mod+d exec --no-startup-id dmenu_run
+bindsym $Mod+d exec --no-startup-id dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+#Pywal color scheme and wallpaper restore
+exec_always --no-startup-id wal -R
 
 ###### AUDIO #######
 
@@ -59,28 +62,47 @@ set $truemute --no-startup-id amixer sset Master mute
 ######### COLORS ##########
 
 #i3 theme ( wpgtk generated and modified)
-set $coloract "#7e4754"
-set $colorin "#56313a"
-set_from_resource $color15 i3wm.color15 "#fff3f6"
-set_from_resource $split i3wm.color10 "#ffad77"
-set_from_resource $coloru i3wm.color2 "#C68A6B"
-set_from_resource $color0 i3wm.color0 "#230312"
-set_from_resource $color8 i3wm.color8 "#480524"
+##set $coloract "#7e4754"
+##set $colorin "#56313a"
+##set_from_resource $color15 i3wm.color15 "#fff3f6"
+##set_from_resource $split i3wm.color10 "#ffad77"
+##set_from_resource $coloru i3wm.color2 "#C68A6B"
+##set_from_resource $color0 i3wm.color0 "#230312"
+##set_from_resource $color8 i3wm.color8 "#480524"
 
 # class                 border    backgr    text    indicator child_border
-client.focused          #f9b509   #555555   #555555  #555555  #555555
-client.focused_inactive $coloract #555555   #555555  #555555  #555555
-client.unfocused        $colorin  $colorin  $color15 #000000  #000000
-client.urgent           $coloru   $coloru   $color15 $coloru  $coloru
-client.placeholder      $color0   $color8   $color15 $color0  $color8
+#client.focused          #55555555   #555555   #555555  #555555  #555555
+#client.focused_inactive #5555555 #5555555   #5555555  #5555555  #5555555
+#client.unfocused        $colorin  $colorin  $color15 #000000  #000000
+#client.unfocused        #55555555  #5555555  #55555555 #55555555  #55555555
+#client.urgent           $coloru   $coloru   $color15 $coloru  $coloru
+#client.placeholder      $color0   $color8   $color15 $color0  $color8
 #client.background      $color0
+
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 ###### KEYBINDINGS #######
 
-set $term urxvt
+set $term urxvt 
 set $browser firefox
 set $fbrowser thunar
-set $music spotify
+set $music com.spotify.Client
 set $up K
 set $down J
 set $left H
@@ -90,7 +112,7 @@ set $right L
 bindsym         $Mod+F1             exec --no-startup-id $browser 
 bindsym         $Mod+F2             exec --no-startup-id $fbrowser
 bindsym         $Mod+F4             exec --no-startup-id $music
-bindsym         $Mod+Print          exec scrot -e 'mv $f ~/Pictures/scrot'
+bindsym         $Mod+Print          exec scrot -e 'mv $f ~/Pictures/Scrot/'
 bindsym         $Mod+F5             exec --no-startup-id syncthing-gtk
 
 
