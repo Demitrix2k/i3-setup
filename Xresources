@@ -66,12 +66,20 @@
 
 
 URxvt.intensityStyles:	false
-URxvt.background:       [70]#000000
+!!Composite transparency
 URxvt.depth:		32
+URxvt.background:       [90]#000000
+
+!! fake transparency
+!URxvt.transparent:	true
+!URxvt.shading:		30
 URxvt.font: 		xft:monospace:size=11
 URxvt.scrollBar:	false
-URxvt.cursorColor:	white
-
+!URxvt.cursorColor:	white
+!URxvt.borderWidth: 	0
+!URxvt.internalBorder: 	0
+!URxvt.externalBorder:	0
+!URxvt.linespace: 	0
 !! Extensions
 URxvt.perl-ext-common:	default,matcher,resize-font,url-select,keyboard-select
 URxvt.colorUL:		#4682B4
