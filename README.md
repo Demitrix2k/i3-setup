@@ -11,6 +11,7 @@ be kind senpai also here's the [wallpaper](Wallpaper.jpg)
 + vim
 + Networkmanager + network-manager-applet
 + neofetch
++ Pywal
 + nitrogen
 + firefox
 + thunar + tumbler
