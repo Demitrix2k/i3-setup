@@ -26,7 +26,7 @@ alert = #7a6165
 [bar/wpgtk]
 ;monitor = ${env:MONITOR:HDMI-1}
 ;monitor = ${env:MONITOR}
-monitor = ${env:MONITOR:LVDS-1}
+;monitor = ${env:MONITOR:LVDS-1}
 width = 100%
 height = 25
 ;offset-x = 1%
@@ -67,7 +67,8 @@ modules-right = volume battery cpu temperature date
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
+;Tray-transparent is deprecated
+;tray-transparent = true
 tray-background = #0000000
 ;tray-background = #0063ff
 
@@ -305,9 +306,9 @@ time = " %I:%M%p"
 label = %date% %time%
 
 [module/volume]
-type = internal/volume
+;type = internal/volume
 ;type = internal/pulseaudio
-;type = internal/alsa
+type = internal/alsa
 
 
 format-volume = <label-volume> <bar-volume>
