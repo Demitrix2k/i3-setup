@@ -79,14 +79,16 @@ if ${use_color} ; then
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
-	alias waly='wal -a 90 -i ~/Pictures/Christmas'
+	alias waly='wal -a 90 -i ~/shit/WP/WP7'
 	alias i3conf='vim ~/.config/i3/config'
 	alias polyconf='vim ~/.config/polybar/config'
 	alias xres='vim ~/.Xresources'
-
-
-
-
+	alias pacup='sudo pacman -Syyuu'
+	alias wonderclear='wondershaper -a wlp3s0 -c'
+	alias wonder1000='wondershaper -a wlp3s0 -d 1024'
+	alias wonder2000='wondershaper -a wlp3s0 -d 2048'
+	alias diskcheck='sudo smartctl -t short -a /dev/sda'
+	
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -152,10 +154,10 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
