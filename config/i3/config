@@ -10,7 +10,7 @@ set $Mod Mod4
 ##### STARTUP PROGRAMS #####
 
 #Compton
-exec --no-startup-id compton
+exec --no-startup-id picom
 #wallpaper
 #exec --no-startup-id nitrogen--restore
 #polybar
@@ -24,7 +24,7 @@ exec_always --no-startup-id ~/.config/i3/Touchpad.sh
 #Category menu
 bindsym $Mod+z exec --no-startup-id morc_menu 
 #Start program launcher
-bindsym $Mod+d exec --no-startup-id dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+bindsym $Mod+d exec --no-startup-id dmenu_run
 #Pywal color scheme and wallpaper restore
 exec_always --no-startup-id wal -R
 
@@ -60,25 +60,6 @@ set $mute --no-startup-id amixer sset Master toggle
 set $truemute --no-startup-id amixer sset Master mute
 
 ######### COLORS ##########
-
-#i3 theme ( wpgtk generated and modified)
-##set $coloract "#7e4754"
-##set $colorin "#56313a"
-##set_from_resource $color15 i3wm.color15 "#fff3f6"
-##set_from_resource $split i3wm.color10 "#ffad77"
-##set_from_resource $coloru i3wm.color2 "#C68A6B"
-##set_from_resource $color0 i3wm.color0 "#230312"
-##set_from_resource $color8 i3wm.color8 "#480524"
-
-# class                 border    backgr    text    indicator child_border
-#client.focused          #55555555   #555555   #555555  #555555  #555555
-#client.focused_inactive #5555555 #5555555   #5555555  #5555555  #5555555
-#client.unfocused        $colorin  $colorin  $color15 #000000  #000000
-#client.unfocused        #55555555  #5555555  #55555555 #55555555  #55555555
-#client.urgent           $coloru   $coloru   $color15 $coloru  $coloru
-#client.placeholder      $color0   $color8   $color15 $color0  $color8
-#client.background      $color0
-
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
